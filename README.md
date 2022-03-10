@@ -12,18 +12,15 @@
 - injection into circular orbit - delta v required to turn elliptical orbit into circular (second injection).
 
 ### Modes:
-- orbital velocity - calculating in orbit velocity relative to primary body
-- delta v - calculating change in velocity in order to reach desired orbit
+- orbital velocity - velocity of orbiting body relative to primary body
+- delta v - change in velocity required to reach desired orbit
 
 ## Orbital velocity
+User inputs peryapse, apoapse and calculation radius which is distance from primary body that must be within peryapse-apoapse range. User will be notified with error message when input is incorrect.
 
 ## Delta V
-
+User inputs peryapse, apoapse and final radius which is desired peryapse or apoapse of final orbit. Next program calculates injection into circular orbit which is delta v required to make the orbit circular.
 
 User inputs apoapse and peryapse of orbit and chooses mode - orbital velocity or delta v - primary body - Earth, Moon or Sun.
-
-
-
-Pressing calculate will display either orbital velocity of object on chosen orbit or delta v and injection into circular orbit.
 
 Calculating even if orbit is below 0. Not a bug it's a feature.
