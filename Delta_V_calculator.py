@@ -212,7 +212,10 @@ class Ui_MainWindow(object):
         Rp = self.radius + 1000 * int(self.radius_peryapse)
         Ra = self.radius + 1000 * int(self.radius_apoapse)
         Rc = self.radius + 1000 * int(self.radius_calculation)
-        if Rc > Ra:
+        if Rc or Ra or Rp < -1*self.radius:
+            self.label_result.setText(f"Entered radius lower than radius of primary body.")
+            self.label_circ_orbit_inj_result.setText(f"You just tried to warp drive.")
+        elif Rc > Ra:
             self.label_result.setText(f"Injection radius higher than apoapse.")
             self.line_orbit_height_input.clear()
         elif Rc < Rp:
@@ -235,6 +238,14 @@ class Ui_MainWindow(object):
         Rf = self.radius + 1000 * int(self.radius_calculation)
         unit_delta = 'm/s'
         unit_circular = 'm/s'
+        if Rf or Ra or Rp < -1*self.radius:
+            self.label_result.setText(f"Entered radius lower than radius of primary body.")
+            self.label_circ_orbit_inj_result.setText(f"You just tried to warp drive.")
+            self.line_orbit_height_input.clear()
+            self.line_apoapse_input.clear()
+            self.line_peryapse_input.clear()
+            return
+
         if self.radio_peryapse.isChecked():
             a = (Rp + Ra) / 2
             velocity_one = int(math.sqrt(self.g_constant * self.mass * ((2 / Rp) - (1 / a))))
@@ -264,7 +275,7 @@ class Ui_MainWindow(object):
             delta_v = velocity_two - velocity_one
             if delta_v > 1000:
                 delta_v = delta_v / 1000
-                unit_delta = "km/h"
+                unit_delta = "km/s"
             self.label_result.setText(f"Delta V: {delta_v} {unit_delta}")
             a = (Ra + Rf) / 2
             velocity_three = int(math.sqrt(self.g_constant * self.mass * ((2 / Rf) - (1 / a))))
@@ -273,7 +284,7 @@ class Ui_MainWindow(object):
             into_circ = velocity_four - velocity_three
             if into_circ > 1000:
                 into_circ = into_circ / 1000
-                unit_circular = "km/h"
+                unit_circular = "km/s"
             self.label_circ_orbit_inj_result.setText(f"Circular orbit: {into_circ} {unit_circular}")
             return delta_v, into_circ
 
