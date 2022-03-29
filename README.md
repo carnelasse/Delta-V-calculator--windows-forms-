@@ -12,11 +12,12 @@
 - Injection into circular orbit - delta v required to turn elliptical orbit into circular.
 
 ## Modes
-- orbital velocity
-- delta V
+- Orbital velocity
+- Delta V
 
 ## Selecting primary body
 User can chose celestial body being orbited in calculations.
+
 Currently app supports:
 - Earth
 - Moon
