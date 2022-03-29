@@ -24,7 +24,10 @@ Currently app supports:
 - Sun
 
 ## Input variables
-
+- Peryapse
+- Apoapse
+- Final orbit (for delta V only)
+- Calculation orbit (for orbital velocity only)
 
 
 User inputs apoapse and peryapse of orbit and chooses mode - orbital velocity or delta v - primary body - Earth, Moon or Sun.
