@@ -29,9 +29,5 @@ Currently app supports:
 - Final orbit (for delta V only)
 - Calculation orbit (for orbital velocity only)
 
-
-User inputs apoapse and peryapse of orbit and chooses mode - orbital velocity or delta v - primary body - Earth, Moon or Sun.
-
-Pressing 'calculate' will display either orbital velocity of object on chosen orbit or delta v and injection into circular orbit.
-
 Calculating even if orbit is below 0. Not a bug it's a feature.
+Calculating below negative primary body radius (eg. for Earth below -6371 km) will summon deamons.
