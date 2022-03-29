@@ -30,4 +30,5 @@ Currently app supports:
 - Calculation orbit (for orbital velocity only)
 
 Calculating even if orbit is below 0. Not a bug it's a feature.
+
 Calculating below negative primary body radius (eg. for Earth below -6371 km) will summon deamons.
