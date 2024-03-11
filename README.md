@@ -32,3 +32,33 @@ Currently app supports:
 Calculating even if orbit is below 0. Not a bug it's a feature.
 
 Calculating below negative primary body radius (eg. for Earth below -6371 km) will summon deamons.
+
+
+# Creating .exe
+
+In cmd install pyinstall:
+
+```
+pip pyinstall
+```
+
+in cmd with directory of .py file type: 
+
+```
+pyinstaller --onefile -w Orbital_Mechanics_Calculator.py
+```
+
+# Creating installer
+
+Downlowa NSIS 1.0
+
+.zip directory with .py file
+
+![image](https://github.com/jmamej/Orbital-Mechanics-Calculator/assets/57408600/4fa6d14f-14d1-460c-9e68-132e9a28c5e5)
+
+Installer based on .ZIP file
+
+
+
+
+
